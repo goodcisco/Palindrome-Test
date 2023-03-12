@@ -6,10 +6,7 @@
 local function isPalindrome(text)
 	local a = string.sub(text, #text, #text)
 	local b = string.sub(text, 1, 1)
-	if a == b then
-		return true
-	end
-	return false
+	return a == b
 end
 
 print("wow", isPalindrome("wow"))
