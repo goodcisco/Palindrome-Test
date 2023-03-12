@@ -27,11 +27,11 @@ local function rearrange(list)
     local reversed = ""
 
     for _, letter in ipairs(list) do
-        normal += letter
+        normal = normal .. letter
     end
 
-    for i = 1, #list, -1 do
-        reversed += list[i]
+    for i = #list, 1, -1 do
+        reversed = reversed .. list[i]
     end
 
     return normal, reversed
