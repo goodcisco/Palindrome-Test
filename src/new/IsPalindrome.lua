@@ -4,13 +4,8 @@
 --]]
 
 local function isPalindrome(text)
-	local a = string.sub(text, #text, #text)
-	local b = string.sub(text, 1, 1)
-	return a == b
+    return string.sub(text, #text, #text) == string.sub(text, 1, 1)
 end
 
-print("wow", isPalindrome("wow"))
-print("deed", isPalindrome("deed"))
-print("stranger", isPalindrome("stranger"))
-print("noon", isPalindrome("noon"))
-print("reverse", isPalindrome("reverse"))
+print(isPalindrome("wow"))
+print(isPalindrome("reverse"))
