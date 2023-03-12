@@ -1,6 +1,6 @@
 --[[
     "Way too complicated and scuffy but it gets the job done" - Kronos
-    thanks for his opinion on the previous version I realized there is a easier way to do it
+    thanks for his opinion on the previous version I realized there is an easier way to do it
 --]]
 
 local function isPalindrome(text)
