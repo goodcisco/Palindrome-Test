@@ -1,3 +1,14 @@
+--[[
+    how to use:
+    local palindromeTest = require("path")
+
+    if palindromeTest("wow") then
+        print("wow is a palindrome")
+    else
+        warn("wow isn't a palindrome")
+    end
+]]
+
 
 local RNG = Random.new()
 
@@ -37,17 +48,9 @@ local function rearrange(list)
     return normal, reversed
 end
 
-local function palindromeTest(text)
-    local subject = text or words[RNG:NextInteger(1, #words)]
-    
-    local normal, reversed = rearrange(splitText(subject))
-
-    local result = "Looks like %q " .. (normal == reversed and "is" or "is't") .. " Palindrome"
-
-    warn(string.format(result, subject))
+local function run(text)
+    local normal, reversed = rearrange(splitText(text))
+    return normal == reversed 
 end
 
-palindromeTest("hello")
-palindromeTest()
-palindromeTest()
-palindromeTest("wow")
+return run
