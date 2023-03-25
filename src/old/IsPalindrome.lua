@@ -13,7 +13,7 @@ local words = {
 }
 
 local function splitText(text)
-    local strings = table.create(#text+1)
+    local strings = table.create(#text)
 
     for i = 1, #text do
         table.insert(strings, string.sub(text, i, i))
